@@ -1,0 +1,14 @@
+RAIN COUNTRY ARCHIVE
+RECOVERY NOTE — AME-09
+
+Partial records recovered after the archive purge.
+
+The first half survived inside the original report source.
+
+The remaining fragment was indexed separately.
+
+Index: 47-09
+
+Recovered data:
+
+WATCHER_47}
