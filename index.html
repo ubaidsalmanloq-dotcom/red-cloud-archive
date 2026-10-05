@@ -47,6 +47,41 @@ body {
     color: #666;
     font-size: 12px;
 }
+
+.search-section {
+    border-top: 1px solid #333;
+    margin-top: 40px;
+    padding-top: 25px;
+}
+
+.search-section h3 {
+    color: #b84040;
+}
+
+.search-input {
+    padding: 10px;
+    width: 260px;
+    background: #111;
+    color: #ddd;
+    border: 1px solid #444;
+}
+
+.search-button {
+    padding: 10px 18px;
+    background: #7d2525;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background: #a33131;
+}
+
+#searchResult {
+    color: #888;
+    margin-top: 15px;
+}
 </style>
 </head>
 
@@ -58,36 +93,79 @@ SHINOBI NETWORK — ARCHIVED PROFILE
 
 <div class="profile">
 
-<div class="username">
-redcloud_47
+    <div class="username">
+        redcloud_47
+    </div>
+
+    <div class="bio">
+        Rain remembers what the clouds forget.<br>
+        Former field observer.
+    </div>
+
+    <div class="post">
+
+        <p class="date">
+            LAST RECOVERED POST
+        </p>
+
+        <p>
+            They removed my old account, but they never found the second one.
+        </p>
+
+        <p>
+            Same rain. Different watcher.
+        </p>
+
+        <p>
+            47 never changed.
+        </p>
+
+    </div>
+
 </div>
 
-<div class="bio">
-Rain remembers what the clouds forget.<br>
-Former field observer.
-</div>
+<div class="search-section">
 
-<div class="post">
+    <h3>Search Archived Users</h3>
 
-<p class="date">
-LAST RECOVERED POST
-</p>
+    <input
+        type="text"
+        id="archiveSearch"
+        class="search-input"
+        placeholder="Enter archived username"
+    >
 
-<p>
-They removed my old account, but they never found the second one.
-</p>
+    <button
+        class="search-button"
+        onclick="searchArchive()">
+        SEARCH
+    </button>
 
-<p>
-Same rain. Different watcher.
-</p>
-
-<p>
-47 never changed.
-</p>
+    <p id="searchResult"></p>
 
 </div>
 
-</div>
+<script>
+function searchArchive() {
+
+    const username =
+        document.getElementById("archiveSearch")
+        .value
+        .trim()
+        .toLowerCase();
+
+    if (username === "rainwatcher_47") {
+
+        window.location.href = "rainwatcher_47.html";
+
+    } else {
+
+        document.getElementById("searchResult").innerText =
+            "No archived profile found.";
+
+    }
+}
+</script>
 
 </body>
 </html>
